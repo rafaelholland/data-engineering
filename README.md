@@ -4,7 +4,7 @@
 ### [Alura](https://cursos.alura.com.br/course/engenharia-dados-apache-airflow)
 - - -
 
-### [Teste]
+### Engenharia de Dados do Zero
 
 <u> Módulos: </u>
 * **O que são Data Pipelines**
@@ -16,6 +16,9 @@
 
 - - -
 ### [Stack Academy](https://stacktecnologias.com.br)
+- - -
+
+### Engenharia de dados: conhecendo Apache Airflow
 
 <u> Módulos: </u>
 * **Conceitos e Fundamentos**
