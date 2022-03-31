@@ -1,0 +1,82 @@
+[2022-03-30 21:18:54,104] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: twitter_dag.transform_twitter_aluraonline 2022-03-29T09:00:00+00:00 [queued]>
+[2022-03-30 21:18:54,145] {taskinstance.py:670} INFO - Dependencies all met for <TaskInstance: twitter_dag.transform_twitter_aluraonline 2022-03-29T09:00:00+00:00 [queued]>
+[2022-03-30 21:18:54,145] {taskinstance.py:880} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-30 21:18:54,145] {taskinstance.py:881} INFO - Starting attempt 1 of 1
+[2022-03-30 21:18:54,145] {taskinstance.py:882} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-30 21:18:54,181] {taskinstance.py:901} INFO - Executing <Task(SparkSubmitOperator): transform_twitter_aluraonline> on 2022-03-29T09:00:00+00:00
+[2022-03-30 21:18:54,234] {standard_task_runner.py:54} INFO - Started process 86293 to run task
+[2022-03-30 21:18:54,414] {standard_task_runner.py:77} INFO - Running: ['airflow', 'run', 'twitter_dag', 'transform_twitter_aluraonline', '2022-03-29T09:00:00+00:00', '--job_id', '16', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/twitter_dag.py', '--cfg_path', '/var/folders/wt/20pgcb1j11323p97x03bt_g00000gr/T/tmpqem_p7vb']
+[2022-03-30 21:18:54,420] {standard_task_runner.py:78} INFO - Job 16: Subtask transform_twitter_aluraonline
+[2022-03-30 21:18:54,504] {logging_mixin.py:112} INFO - Running <TaskInstance: twitter_dag.transform_twitter_aluraonline 2022-03-29T09:00:00+00:00 [running]> on host rafa-mac.local
+[2022-03-30 21:18:55,073] {base_hook.py:89} INFO - Using connection to: id: spark_default. Host: local, Port: None, Schema: None, Login: None, Password: None, extra: XXXXXXXX
+[2022-03-30 21:18:55,078] {spark_submit_hook.py:325} INFO - Spark-Submit cmd: /Users/rafa/Documents/python/spark/bin/spark-submit --master local --name twitter_transformation /Users/rafa/Documents/python/datapipeline/spark/transformation.py --src /Users/rafa/Documents/python/datapipeline/datalake/bronze/twitter_aluraonline/extract_date=2022-03-29 --dest /Users/rafa/Documents/python/datapipeline/datalake/silver/twitter_aluraonline/ --process-date 2022-03-29
+[2022-03-30 21:19:02,685] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2022-03-30 21:19:06,672] {spark_submit_hook.py:479} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2022-03-30 21:19:06,708] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:06 INFO SparkContext: Running Spark version 3.1.3
+[2022-03-30 21:19:06,850] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:06 INFO ResourceUtils: ==============================================================
+[2022-03-30 21:19:06,852] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:06 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2022-03-30 21:19:06,854] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:06 INFO ResourceUtils: ==============================================================
+[2022-03-30 21:19:06,854] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:06 INFO SparkContext: Submitted application: twitter_transformation
+[2022-03-30 21:19:06,935] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:06 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2022-03-30 21:19:06,959] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:06 INFO ResourceProfile: Limiting resource is cpu
+[2022-03-30 21:19:06,962] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:06 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2022-03-30 21:19:07,153] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:07 INFO SecurityManager: Changing view acls to: rafa
+[2022-03-30 21:19:07,154] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:07 INFO SecurityManager: Changing modify acls to: rafa
+[2022-03-30 21:19:07,154] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:07 INFO SecurityManager: Changing view acls groups to:
+[2022-03-30 21:19:07,155] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:07 INFO SecurityManager: Changing modify acls groups to:
+[2022-03-30 21:19:07,156] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(rafa); groups with view permissions: Set(); users  with modify permissions: Set(rafa); groups with modify permissions: Set()
+[2022-03-30 21:19:08,021] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:08 INFO Utils: Successfully started service 'sparkDriver' on port 55247.
+[2022-03-30 21:19:08,129] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:08 INFO SparkEnv: Registering MapOutputTracker
+[2022-03-30 21:19:08,253] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:08 INFO SparkEnv: Registering BlockManagerMaster
+[2022-03-30 21:19:08,341] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:08 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2022-03-30 21:19:08,342] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:08 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2022-03-30 21:19:08,350] {spark_submit_hook.py:479} INFO - Traceback (most recent call last):
+[2022-03-30 21:19:08,351] {spark_submit_hook.py:479} INFO - File "/Users/rafa/Documents/python/datapipeline/spark/transformation.py", line 57, in <module>
+[2022-03-30 21:19:08,352] {spark_submit_hook.py:479} INFO - spark = SparkSession\
+[2022-03-30 21:19:08,352] {spark_submit_hook.py:479} INFO - File "/Users/rafa/Documents/python/spark/python/lib/pyspark.zip/pyspark/sql/session.py", line 228, in getOrCreate
+[2022-03-30 21:19:08,353] {spark_submit_hook.py:479} INFO - File "/Users/rafa/Documents/python/spark/python/lib/pyspark.zip/pyspark/context.py", line 384, in getOrCreate
+[2022-03-30 21:19:08,354] {spark_submit_hook.py:479} INFO - File "/Users/rafa/Documents/python/spark/python/lib/pyspark.zip/pyspark/context.py", line 146, in __init__
+[2022-03-30 21:19:08,354] {spark_submit_hook.py:479} INFO - File "/Users/rafa/Documents/python/spark/python/lib/pyspark.zip/pyspark/context.py", line 209, in _do_init
+[2022-03-30 21:19:08,355] {spark_submit_hook.py:479} INFO - File "/Users/rafa/Documents/python/spark/python/lib/pyspark.zip/pyspark/context.py", line 321, in _initialize_context
+[2022-03-30 21:19:08,356] {spark_submit_hook.py:479} INFO - File "/Users/rafa/Documents/python/spark/python/lib/py4j-0.10.9-src.zip/py4j/java_gateway.py", line 1568, in __call__
+[2022-03-30 21:19:08,357] {spark_submit_hook.py:479} INFO - File "/Users/rafa/Documents/python/spark/python/lib/py4j-0.10.9-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2022-03-30 21:19:08,358] {spark_submit_hook.py:479} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+[2022-03-30 21:19:08,359] {spark_submit_hook.py:479} INFO - : java.lang.IllegalAccessError: class org.apache.spark.storage.StorageUtils$ (in unnamed module @0x4ccc0db7) cannot access class sun.nio.ch.DirectBuffer (in module java.base) because module java.base does not export sun.nio.ch to unnamed module @0x4ccc0db7
+[2022-03-30 21:19:08,359] {spark_submit_hook.py:479} INFO - at org.apache.spark.storage.StorageUtils$.<init>(StorageUtils.scala:213)
+[2022-03-30 21:19:08,360] {spark_submit_hook.py:479} INFO - at org.apache.spark.storage.StorageUtils$.<clinit>(StorageUtils.scala)
+[2022-03-30 21:19:08,361] {spark_submit_hook.py:479} INFO - at org.apache.spark.storage.BlockManagerMasterEndpoint.<init>(BlockManagerMasterEndpoint.scala:109)
+[2022-03-30 21:19:08,362] {spark_submit_hook.py:479} INFO - at org.apache.spark.SparkEnv$.$anonfun$create$9(SparkEnv.scala:371)
+[2022-03-30 21:19:08,363] {spark_submit_hook.py:479} INFO - at org.apache.spark.SparkEnv$.registerOrLookupEndpoint$1(SparkEnv.scala:311)
+[2022-03-30 21:19:08,363] {spark_submit_hook.py:479} INFO - at org.apache.spark.SparkEnv$.create(SparkEnv.scala:359)
+[2022-03-30 21:19:08,364] {spark_submit_hook.py:479} INFO - at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:189)
+[2022-03-30 21:19:08,365] {spark_submit_hook.py:479} INFO - at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:277)
+[2022-03-30 21:19:08,366] {spark_submit_hook.py:479} INFO - at org.apache.spark.SparkContext.<init>(SparkContext.scala:458)
+[2022-03-30 21:19:08,366] {spark_submit_hook.py:479} INFO - at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2022-03-30 21:19:08,367] {spark_submit_hook.py:479} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2022-03-30 21:19:08,367] {spark_submit_hook.py:479} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+[2022-03-30 21:19:08,368] {spark_submit_hook.py:479} INFO - at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2022-03-30 21:19:08,369] {spark_submit_hook.py:479} INFO - at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+[2022-03-30 21:19:08,370] {spark_submit_hook.py:479} INFO - at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+[2022-03-30 21:19:08,370] {spark_submit_hook.py:479} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2022-03-30 21:19:08,371] {spark_submit_hook.py:479} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2022-03-30 21:19:08,372] {spark_submit_hook.py:479} INFO - at py4j.Gateway.invoke(Gateway.java:238)
+[2022-03-30 21:19:08,373] {spark_submit_hook.py:479} INFO - at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2022-03-30 21:19:08,374] {spark_submit_hook.py:479} INFO - at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2022-03-30 21:19:08,375] {spark_submit_hook.py:479} INFO - at py4j.GatewayConnection.run(GatewayConnection.java:238)
+[2022-03-30 21:19:08,376] {spark_submit_hook.py:479} INFO - at java.base/java.lang.Thread.run(Thread.java:831)
+[2022-03-30 21:19:08,376] {spark_submit_hook.py:479} INFO - 
+[2022-03-30 21:19:08,473] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:08 INFO ShutdownHookManager: Shutdown hook called
+[2022-03-30 21:19:08,503] {spark_submit_hook.py:479} INFO - 22/03/30 21:19:08 INFO ShutdownHookManager: Deleting directory /private/var/folders/wt/20pgcb1j11323p97x03bt_g00000gr/T/spark-8caab12c-5b03-4521-8ad8-92125f4063cb
+[2022-03-30 21:19:08,959] {taskinstance.py:1150} ERROR - Cannot execute: /Users/rafa/Documents/python/spark/bin/spark-submit --master local --name twitter_transformation /Users/rafa/Documents/python/datapipeline/spark/transformation.py --src /Users/rafa/Documents/python/datapipeline/datalake/bronze/twitter_aluraonline/extract_date=2022-03-29 --dest /Users/rafa/Documents/python/datapipeline/datalake/silver/twitter_aluraonline/ --process-date 2022-03-29. Error code is: 1.
+Traceback (most recent call last):
+  File "/Users/rafa/Documents/python/datapipeline/.env/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 984, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/Users/rafa/Documents/python/datapipeline/.env/lib/python3.8/site-packages/airflow/contrib/operators/spark_submit_operator.py", line 187, in execute
+    self._hook.submit(self._application)
+  File "/Users/rafa/Documents/python/datapipeline/.env/lib/python3.8/site-packages/airflow/contrib/hooks/spark_submit_hook.py", line 403, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: /Users/rafa/Documents/python/spark/bin/spark-submit --master local --name twitter_transformation /Users/rafa/Documents/python/datapipeline/spark/transformation.py --src /Users/rafa/Documents/python/datapipeline/datalake/bronze/twitter_aluraonline/extract_date=2022-03-29 --dest /Users/rafa/Documents/python/datapipeline/datalake/silver/twitter_aluraonline/ --process-date 2022-03-29. Error code is: 1.
+[2022-03-30 21:19:08,967] {taskinstance.py:1187} INFO - Marking task as FAILED. dag_id=twitter_dag, task_id=transform_twitter_aluraonline, execution_date=20220329T090000, start_date=20220331T001854, end_date=20220331T001908
+[2022-03-30 21:19:09,087] {local_task_job.py:102} INFO - Task exited with return code 1
