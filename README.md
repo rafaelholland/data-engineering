@@ -2,7 +2,7 @@
 
 - - -
 ### [Alura](https://cursos.alura.com.br/course/engenharia-dados-apache-airflow)
-- - -
+
 
 ### Engenharia de Dados do Zero
 
@@ -16,7 +16,7 @@
 
 - - -
 ### [Stack Academy](https://stacktecnologias.com.br)
-- - -
+
 
 ### Engenharia de dados: conhecendo Apache Airflow
 
