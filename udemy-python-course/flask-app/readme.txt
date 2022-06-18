@@ -1,0 +1,1 @@
+To activate this project's virtualenv just run 'pipenv shell'
